@@ -1,9 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap");
 
+*,
+::after,
+::before {
+  --focus-color: #ebe9fe;
+  --focus-thickness: 5.5px;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Red Hat Display", sans-serif;
+.text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Profile section */
+#profile__img {
+  background-position: 50% 50%;
+  object-fit: cover;
+}
+div#profileImgWrapper {
+  @apply mx-auto relative rounded-full overflow-hidden mb-6;
+}
+div#profileImgWrapper:focus {
+  outline: var(--focus-thickness) solid var(--focus-color);
+}
+div#profileImgWrapper:hover .uploadWrapper {
+  @apply opacity-100 duration-500 ease-in-out;
+}
+.uploadWrapper {
+  @apply opacity-0 absolute top-0 bottom-0 right-0 left-0 flex items-end justify-center duration-500 ease-in-out;
+  background-color: rgba(52, 64, 84, 0.75);
+}
+
+.shareContainer:hover #tooltip {
+  @apply opacity-100 duration-500 ease-in-out;
+}
+@media (max-width: 448px) {
+  .shareContainer:hover #tooltip {
+    @apply opacity-0 duration-500 ease-in-out;
+  }
+}
+
+.shareIconCirle {
+  @apply w-fit p-2 rounded-full cursor-pointer active:scale-95;
+  outline: 2px dashed #d0d5dd !important;
+}
+div.shareDisabled {
+  @apply active:!scale-100;
+  background: #f2f4f7;
+}
+.shareIconCirle:focus {
+  outline: 2px solid #d0d5dd;
+}
+.shareIconCirle:hover {
+  background: #f2f4f7;
+}
+.shareIconCirle:hover .shareIcon {
+  @apply opacity-100 duration-500 ease-in-out;
+}
+.shareIcon {
+  @apply opacity-70 duration-500 ease-in-out;
+}
+/* mobile */
+@media (max-width: 448px) {
+  .shareIconCirle {
+    @apply w-fit p-2 rounded-full cursor-pointer active:scale-95;
+    outline: 2px solid #d0d5dd !important;
+    background: #f2f4f7;
+  }
+  .shareIcon {
+    @apply !opacity-100;
+  }
+}
+
+#tooltip {
+  @apply absolute -translate-x-full -translate-y-1/2 -left-1 top-1/2 shadow-lg bg-gray-900 whitespace-nowrap opacity-0 duration-500 ease-in-out;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.42857143;
+  font-size: 12px;
+
+  display: inline-block;
+  border-radius: 10px;
+}
+#tooltip.left {
+  margin-left: -5px;
+}
+#tooltip .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000;
+}
+#tooltip.left .tooltip-arrow {
+  top: 50%;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+  right: -5px;
+  left: auto;
+}
+#tooltip .tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+}
+#tooltip .tooltip-label {
+  /*max-width: 200px;*/
+  @apply bg-gray-900;
+  padding: 8px 12px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
 }
