@@ -1,6 +1,6 @@
 import profile__img from "../assets/img/profile__img.png";
 import { ReactComponent as CameraSvg } from "../assets/icons/camera-01.svg";
-import Share from "./Share";
+import ProfileIcon from "./ProfileIcon";
 
 export default function Profile() {
   return (
@@ -44,7 +44,7 @@ export default function Profile() {
         </div>
 
         <div className="absolute top-0 right-0 -translate-y-1/2">
-          <Share />
+          <ProfileIcon />
         </div>
       </div>
     </>
