@@ -5,6 +5,9 @@
 ::before {
   --focus-color: #ebe9fe;
   --focus-thickness: 5.5px;
+  --link-default-background: #eaecf0;
+  --link-hovered-background: #d0d5dd;
+  --link-disabled-background: #fcfcfd;
 }
 body {
   font-family: "Red Hat Display", sans-serif;
@@ -116,4 +119,29 @@ div.iconDisabled {
   color: #fff;
   text-align: center;
   border-radius: 8px;
+}
+
+/* Links Section */
+.btn_link {
+  @apply mb-6 block text-center shadow-sm;
+  padding: 24px 32px;
+  background: var(--link-default-background);
+  border: 1px solid var(--link-default-background);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+.btn_link:hover {
+  background: var(--link-hovered-background);
+  border: 1px solid var(--link-hovered-background);
+}
+a.btn_link:focus {
+  outline: 1px solid #98a2b3;
+}
+body a.disabled_link {
+  pointer-events: none;
+
+  background: var(--link-disabled-background);
+  border: 1px solid #f2f4f7;
 }
