@@ -145,3 +145,9 @@ body a.disabled_link {
   background: var(--link-disabled-background);
   border: 1px solid #f2f4f7;
 }
+
+/* footer section */
+.footerContent {
+  @apply pt-8 flex flex-col justify-center gap-4 sm:flex-row sm:justify-between sm:gap-8;
+  border-top: 1px solid #eaecf0;
+}
