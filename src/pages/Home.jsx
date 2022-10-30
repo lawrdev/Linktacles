@@ -2,6 +2,7 @@ import Links from "../components/Links";
 import Profile from "../components/Profile";
 import SlackImg from "../assets/img/slack.png";
 import GithubImg from "../assets/img/github.png";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -11,13 +12,29 @@ function Home() {
         <Links />
 
         {/* Social section */}
-        <section className="py-6">
+        <section className="py-6 mb-16">
           <div className="flex justify-center items-center gap-6">
-            <img src={SlackImg} alt="slack" width="24px" height="24px" />
-            <img src={GithubImg} alt="slack" width="24px" height="24px" />
+            <a
+              alt="slack"
+              href="https://lawrdev.slack.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={SlackImg} alt="slack" width="24px" height="24px" />
+            </a>
+            <a
+              alt="github"
+              href="https://github.com/lawrdev/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={GithubImg} alt="slack" width="24px" height="24px" />
+            </a>
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 }
