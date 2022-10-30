@@ -21,6 +21,11 @@ body {
   line-height: 30px;
 }
 
+#focusItem:focus {
+  @apply rounded-full;
+  outline: 2px solid #d0d5dd;
+}
+
 /* Profile section */
 #profile__img {
   background-position: 50% 50%;
@@ -40,45 +45,31 @@ div#profileImgWrapper:hover .uploadWrapper {
   background-color: rgba(52, 64, 84, 0.75);
 }
 
-.shareContainer:hover #tooltip {
+.iconContainer:hover #tooltip {
   @apply opacity-100 duration-500 ease-in-out;
 }
 @media (max-width: 448px) {
-  .shareContainer:hover #tooltip {
+  .iconContainer:hover #tooltip {
     @apply opacity-0 duration-500 ease-in-out;
   }
 }
-
-.shareIconCirle {
-  @apply w-fit p-2 rounded-full cursor-pointer active:scale-95;
+.iconCirle {
+  @apply w-fit p-1.5 rounded-full cursor-pointer active:scale-95;
   outline: 2px dashed #d0d5dd !important;
 }
-div.shareDisabled {
+
+div.iconDisabled {
   @apply active:!scale-100;
   background: #f2f4f7;
 }
-.shareIconCirle:focus {
-  outline: 2px solid #d0d5dd;
-}
-.shareIconCirle:hover {
+.iconCirle:hover {
   background: #f2f4f7;
 }
-.shareIconCirle:hover .shareIcon {
+.iconCirle:hover .icon {
   @apply opacity-100 duration-500 ease-in-out;
 }
-.shareIcon {
+.icon {
   @apply opacity-70 duration-500 ease-in-out;
-}
-/* mobile */
-@media (max-width: 448px) {
-  .shareIconCirle {
-    @apply w-fit p-2 rounded-full cursor-pointer active:scale-95;
-    outline: 2px solid #d0d5dd !important;
-    background: #f2f4f7;
-  }
-  .shareIcon {
-    @apply !opacity-100;
-  }
 }
 
 #tooltip {
