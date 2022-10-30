@@ -1,12 +1,9 @@
-
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-        <p className='text-lg font-bold'>Learn React</p>
-      </header>
+    <div className='px-4'>
+      <Home />
     </div>
   );
 }
