@@ -2,6 +2,10 @@ import PropTypes from "prop-types";
 import { ReactComponent as ShareSvg } from "../assets/icons/share.svg";
 
 export default function Share({ disabled }) {
+  const handleCopy = () => {
+    navigator.clipboard.writeText(window.location.href);
+  };
+
   return (
     <button
       className={
@@ -14,6 +18,7 @@ export default function Share({ disabled }) {
       <div
         className={disabled ? "shareIconCirle shareDisabled" : "shareIconCirle"}
         tabIndex="1"
+        onClick={disabled && handleCopy}
       >
         <ShareSvg className="shareIcon" />
       </div>
