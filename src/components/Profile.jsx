@@ -5,7 +5,7 @@ import ProfileIcon from "./ProfileIcon";
 export default function Profile() {
   return (
     <>
-      <div className="relative text-gray-900 max-w-3xl mx-auto">
+      <div className="mb-9 sm:mb-14 relative text-gray-900 max-w-3xl mx-auto">
         <div
           id="profileImgWrapper"
           style={{ width: "88px", height: "88px" }}
