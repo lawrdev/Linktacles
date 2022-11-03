@@ -4,7 +4,7 @@ import I4G from "../assets/img/I4G.png";
 function Footer() {
   return (
     <footer>
-      <div className="max-w-7xl mx-auto sm:px-8 py-8 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
         <div className="footerContent">
           <div className="h-6 sm:h-7 w-32 sm:w-40">
             <img
