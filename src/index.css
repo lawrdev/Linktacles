@@ -8,6 +8,7 @@
   --link-default-background: #eaecf0;
   --link-hovered-background: #d0d5dd;
   --link-disabled-background: #fcfcfd;
+  --btn-color: #1570ef;
 }
 body {
   font-family: "Red Hat Display", sans-serif;
@@ -144,6 +145,108 @@ body a.disabled_link {
 
   background: var(--link-disabled-background);
   border: 1px solid #f2f4f7;
+}
+
+/* Contact page */
+
+.input-item {
+  @apply py-2.5 px-3.5 w-full text-gray-900;
+  background: #ffffff;
+  border: 1px solid var(--link-hovered-background);
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+.input-item:focus {
+  outline: 1px solid #84caff;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+}
+textarea.mssg-error {
+  border: 1px solid #f89687;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+textarea.mssg-error:focus {
+  outline: 1px solid #f89687 !important;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #ffd3cc !important;
+}
+
+.checkbox {
+  accent-color: #9d3039;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* Style the span */
+.checkbox + span {
+  cursor: pointer;
+}
+/* Checkbox un-checked style */
+.checkbox + span:before {
+  content: " ";
+  background: #ffffff;
+  border: 1px solid var(--link-hovered-background);
+  border-radius: 6px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /*margin-right: 0.5em;
+  margin-top: 0.5em;
+  vertical-align: -2px;*/
+}
+
+/* Checked checkbox style */
+.checkbox:checked + span:before {
+  background-image: url("./assets/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* The size of the checkmark icon */
+  background-size: 14px;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  color: white;
+  border: 1px solid #1570ef;
+}
+/* (!disabled) on focus + tab */
+.checkbox:focus + span:before,
+.checkbox:not(:disabled) + span:hover:before {
+  border: 1px solid #84caff;
+  box-shadow: 0px 0px 0px 4px #d1e9ff;
+  border-radius: 6px;
+  /* Visible in Windows high-contrast themes
+     box-shadow will be hidden in these modes and
+     transparency will not be hidden in high-contrast
+     thus box-shadow will not shown but the outline will,
+     providing accessibility */
+  outline-color: transparent;
+  outline-width: 2px;
+  outline-style: dotted;
+}
+/* Disabled checkbox styles */
+.checkbox:disabled + span:before {
+  cursor: default;
+  background: #f2f4f7 !important;
+}
+
+.form_btn {
+  @apply w-full text-base font-semibold duration-500 ease-out;
+  color: #fff;
+  padding: 12px 20px;
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+.form_btn:hover {
+  @apply duration-500 ease-out;
+  background: #175cd3;
+}
+.form_btn:focus {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+}
+.form_btn:disabled {
+  background: #b2ddff;
+  border: 1px solid #b2ddff;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
 }
 
 /* footer section */
