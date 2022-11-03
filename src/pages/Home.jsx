@@ -2,7 +2,6 @@ import Links from "../components/Links";
 import Profile from "../components/Profile";
 import SlackImg from "../assets/img/slack.png";
 import GithubImg from "../assets/img/github.png";
-import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -33,8 +32,6 @@ function Home() {
           </div>
         </section>
       </div>
-
-      <Footer />
     </>
   );
 }
