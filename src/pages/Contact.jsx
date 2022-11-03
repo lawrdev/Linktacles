@@ -190,7 +190,7 @@ export function Contact() {
               </div>
 
               <div>
-                <button type="submit" className="form_btn">
+                <button id="btn__submit" type="submit" className="form_btn">
                   Send message
                 </button>
               </div>
