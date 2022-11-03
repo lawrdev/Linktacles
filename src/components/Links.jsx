@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const linkList = [
   {
@@ -48,6 +48,9 @@ function Links() {
             {item.title}
           </a>
         ))}
+        <Link to="/contact" id="contact" className="btn_link">
+          Contact Me
+        </Link>
       </div>
     </>
   );
