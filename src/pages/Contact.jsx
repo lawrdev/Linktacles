@@ -77,9 +77,8 @@ export function Contact() {
                   </label>
                   <div className="relative">
                     <input
-                      required
                       type="text"
-                      id="firstname"
+                      id="first_name"
                       name="firstname"
                       placeholder="Enter your first name"
                       className="input-item"
@@ -95,16 +94,15 @@ export function Contact() {
 
                 <div className="flex-grow flex flex-col">
                   <label
-                    htmlFor="firstname"
+                    htmlFor="lastname"
                     className="text-sm font-medium text-gray-700 mb-1.5"
                   >
                     Last name
                   </label>
                   <div className="relative">
                     <input
-                      required
                       type="text"
-                      id="lastname"
+                      id="last_name"
                       name="lastname"
                       placeholder="Enter your last name"
                       className="input-item"
@@ -128,7 +126,6 @@ export function Contact() {
                 </label>
                 <div className="relative">
                   <input
-                    required
                     type="email"
                     id="email"
                     name="email"
@@ -174,7 +171,6 @@ export function Contact() {
               <div className="mb-8 flex items-start gap-3">
                 <label htmlFor="agree">
                   <input
-                    required
                     type="checkbox"
                     id="agree"
                     name="checkbox"
